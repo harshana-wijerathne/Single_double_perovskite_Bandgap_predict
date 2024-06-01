@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style2.css">
+    <title>Predictor</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Perovskite Bandgap Predictor</h1>
+        <div class="nextbutton">
+            <form action="{{ url_for('go_to_first_page') }}" method="post">
+            <button type="submit">ABX<sub>3</sub> Perovskite</button>
+            </form>
+            <form action="{{ url_for('go_to_second_page') }}" method="post">            
+            <button type="submit">Double Perovskite </button>
+            </form>
+        </div> 
+    </header>
+    <div class="content">
+        <div class="wrapper">
+            <div class="title">
+                Double Perovskite BandGap Predictor
+            </div>
+            <form action="/second_page" method="POST">
+                <div class="form"></div>
+                    <div class="inputfiled">
+                        <label for="radiusA">Radius of A</label>
+                        <div class = "custom_select">
+                            <select name="radiusA" id="radiusA">
+                                <option value="" selected hidden>Select</option>
+                                <option value="Ag">Ag</option>
+                                <option value="Ba">Ba</option>
+                                <option value="Cs">Cs</option>
+                                <option value="In">In</option>
+                                <option value="K">K</option>
+                                <option value="Li">Li</option>
+                                <option value="Rb">Rb</option>
+                                <option value="Tl">Tl</option>
+                                <option value="MA">MA</option>
+                                <option value="FA">FA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="inputfiled">
+                        <label for="radiusB1">Radius of B1</label>
+                        <div class = "custom_select">
+                            <select name="radiusB1" id="radiusB1">
+                                <option value="" selected hidden>Select</option>
+                                <option value="Al">Al</option>
+                                <option value="As">As</option>
+                                <option value="Au">Au</option>
+                                <option value="Ba">Ba</option>
+                                <option value="Be">Be</option>
+                                <option value="Ca">Ca</option>
+                                <option value="Cd">Cd</option>
+                                <option value="Co">Co</option>
+                                <option value="Cr">Cr</option>
+                                <option value="Cu">Cu</option>
+                                <option value="Fe">Fe</option>
+                                <option value="Ga">Ga</option>
+                                <option value="Ge">Ge</option>
+                                <option value="Hf">Hf</option>
+                                <option value="Hg">Hg</option>
+                                <option value="In">In</option>
+                                <option value="Ir">Ir</option>
+                                <option value="Li">Li</option>
+                                <option value="Mg">Mg</option>
+                                <option value="Mn">Mn</option>
+                                <option value="Na">Na</option>
+                                <option value="Ni">Ni</option>
+                                <option value="Os">Os</option>
+                                <option value="P">P</option>
+                                <option value="Pb">Pb</option>
+                                <option value="Pd">Pd</option>
+                                <option value="Pt">Pt</option>
+                                <option value="Rh">Rh</option>
+                                <option value="Ru">Ru</option>
+                                <option value="Sb">Sb</option>
+                                <option value="Sc">Sc</option>
+                                <option value="Se">Se</option>
+                                <option value="Si">Si</option>
+                                <option value="Sn">Sn</option>
+                                <option value="Sr">Sr</option>
+                                <option value="Ti">Ti</option>
+                                <option value="Tl">Tl</option>
+                                <option value="V">V</option>
+                                <option value="Y">Y</option>
+                                <option value="Zn">Zn</option>
+                                <option value="Zr">Zr</option>
+                                <option value="Ag">Ag</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="inputfiled">
+                        <label for="radiusB2">Radius of B2</label>
+                        <div class = "custom_select">
+                            <select name="radiusB2" id="radiusB2">
+                                <option value="" selected hidden>Select</option>
+                                <option value="Al">Al</option>
+                                <option value="As">As</option>
+                                <option value="Au">Au</option>
+                                <option value="Ba">Ba</option>
+                                <option value="Be">Be</option>
+                                <option value="Ca">Ca</option>
+                                <option value="Cd">Cd</option>
+                                <option value="Co">Co</option>
+                                <option value="Cr">Cr</option>
+                                <option value="Cu">Cu</option>
+                                <option value="Fe">Fe</option>
+                                <option value="Ga">Ga</option>
+                                <option value="Ge">Ge</option>
+                                <option value="Hf">Hf</option>
+                                <option value="Hg">Hg</option>
+                                <option value="In">In</option>
+                                <option value="Ir">Ir</option>
+                                <option value="Li">Li</option>
+                                <option value="Mg">Mg</option>
+                                <option value="Mn">Mn</option>
+                                <option value="Na">Na</option>
+                                <option value="Ni">Ni</option>
+                                <option value="Os">Os</option>
+                                <option value="P">P</option>
+                                <option value="Pb">Pb</option>
+                                <option value="Pd">Pd</option>
+                                <option value="Pt">Pt</option>
+                                <option value="Rh">Rh</option>
+                                <option value="Ru">Ru</option>
+                                <option value="Sb">Sb</option>
+                                <option value="Sc">Sc</option>
+                                <option value="Se">Se</option>
+                                <option value="Si">Si</option>
+                                <option value="Sn">Sn</option>
+                                <option value="Sr">Sr</option>
+                                <option value="Ti">Ti</option>
+                                <option value="Tl">Tl</option>
+                                <option value="V">V</option>
+                                <option value="Y">Y</option>
+                                <option value="Zn">Zn</option>
+                                <option value="Zr">Zr</option>
+                                <option value="Ag">Ag</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="inputfiled">
+                        <label for="radiusC">Radius of X</label>
+                        <div class = "custom_select">
+                            <select name="radiusC" id="radiusC">
+                                <option value="" selected hidden>Select</option>
+                                <option value="F">F</option>
+                                <option value="Cl">Cl</option>
+                                <option value="Br">Br</option>
+                                <option value="I">I</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="inputfield">
+                        <input class="btn" type="submit" value="Predict">
+                    </div>
+                </div>
+            </form>
+            
+            <div class="result">
+               
+                <h1>{{a}}<sub>2</sub>{{b1}}<sub></sub>{{b2}}<sub></sub>{{x}}<sub>6</sub></h1>
+                
+                <p>Predicted BandGap : {{pred_value}}</p>
+                <p>Goldsmidt factor : {{t_value}}</p>
+                <p>Tolarance factor : {{tau_value}}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
