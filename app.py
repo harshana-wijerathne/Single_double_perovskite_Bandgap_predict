@@ -10,7 +10,8 @@ def prediction(lst):
         filename = 'model/Bandgap_predicter_model.pickle'  # Use forward slash for path
         with open(filename, 'rb') as file:
             model = pickle.load(file)
-        pred_value = model.predict([lst])
+        pred_value1 = model.predict([lst])
+        pred_value =(pred_value1*0.7911172826831386)+0.48805921634099875
         return pred_value
     except Exception as e:
         return str(e)
